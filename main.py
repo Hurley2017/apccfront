@@ -12,7 +12,7 @@ app = Flask(__name__)
 #By cors policy allowing backend url to access frontend services via a secure connection
 
 rootr = {
-    "origins": ["http://irctcbackend.herokuapp.com"]
+    "origins": ["https://www.apccbackend.gq/"]
 }
 
 cors = CORS(app, resources={"*": rootr})

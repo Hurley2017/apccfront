@@ -29,7 +29,7 @@ function logout()
         if (msg == "success")
         {
             sessionStorage.clear();
-            window.location= "https://apccproject.herokuapp.com/userlock";
+            window.location= "http://www.apccproject.ml/userlock";
         }
     }
 })
@@ -37,5 +37,5 @@ function logout()
 function login()
 {
     sessionStorage.clear();
-    window.location= "https://apccproject.herokuapp.com/userlock";
+    window.location= "http://www.apccproject.ml/userlock";
 }

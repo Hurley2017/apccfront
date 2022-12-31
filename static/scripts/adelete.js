@@ -19,7 +19,7 @@ function runapp()
             if(msg == "Initiating lockdown")
             {
                 sessionStorage.clear()
-                window.location = "https://apccproject.herokuapp.com/superadminlock"
+                window.location = "http://www.apccproject.ml/superadminlock"
             }
         }
     })

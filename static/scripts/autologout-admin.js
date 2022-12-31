@@ -20,7 +20,7 @@ function logout()
         if (msg == "success")
         {
             sessionStorage.clear();
-            window.location= "https://apccproject.herokuapp.com/adminlock";
+            window.location= "http://www.apccproject.ml/adminlock";
         }
     }
 })

@@ -19,7 +19,7 @@ function runapp()
             success: function(msg){
                 document.getElementById("msg").innerHTML = msg;
                 if (msg=="Registered Successfully"){
-                    window.location = "https://apccproject.herokuapp.com/userlock";
+                    window.location = "http://www.apccproject.ml/userlock";
                 }
                 }
             })

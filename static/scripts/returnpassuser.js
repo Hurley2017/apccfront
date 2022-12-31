@@ -13,7 +13,7 @@ var jdoc = JSON.stringify({"session":islog, "ph_num":ph_num});
             if(msg == "no session")
             {
                 sessionStorage.clear()
-                window.location = "https://apccproject.herokuapp.com/userlock"
+                window.location = "http://www.apccproject.ml/userlock"
             }
             }
         })

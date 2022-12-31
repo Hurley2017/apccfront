@@ -31,11 +31,11 @@ function runapp()
         if(f == "session expired or invalid user. Please login again.")
         {
             sessionStorage.clear();
-            window.location = "https://apccproject.herokuapp.com/userlock";
+            window.location = "http://www.apccproject.ml/userlock";
         }
         else if(f == "Credentials doesn't match, Try resetting your password.")
         {
-            document.getElementById("msg").innerHTML = f + " <a href='https://apccproject.herokuapp.com/user/forgotpassword'>Reset Password</a>";
+            document.getElementById("msg").innerHTML = f + " <a href='http://www.apccproject.ml/user/forgotpassword'>Reset Password</a>";
         }
     }
     

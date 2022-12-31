@@ -46,5 +46,5 @@ function choose(i)
 function logout()
 {
     sessionStorage.clear()
-    window.location= "https://apccproject.herokuapp.com/adminlock";
+    window.location= "http://www.apccproject.ml/adminlock";
 }

@@ -66,7 +66,7 @@ function change()
                 if(msg == "password changed.")
                 {
                     sessionStorage.clear();
-                    window.location= "https://apccproject.herokuapp.com/userlock";
+                    window.location= "http://www.apccproject.ml/userlock";
                 }
                 }
             })

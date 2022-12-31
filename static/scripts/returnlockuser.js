@@ -12,7 +12,7 @@ var jdoc = JSON.stringify({"session":islog, "ph_num":ph_num});
         success: function(msg){ 
             if(msg == "success")
             {
-                window.location = "https://apccproject.herokuapp.com/user"
+                window.location = "http://www.apccproject.ml/user"
             }
             }
         })

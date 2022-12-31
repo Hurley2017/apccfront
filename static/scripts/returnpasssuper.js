@@ -12,7 +12,7 @@ var jdoc = JSON.stringify({"session":islog, "sid":sid});
         success: function(msg){
             if(msg == "no session")
             {
-                window.location = "https://apccproject.herokuapp.com/superadminlock"
+                window.location = "http://www.apccproject.ml/superadminlock"
             }
             }
         })

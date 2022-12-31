@@ -19,7 +19,7 @@ function passvalue(f)
     if(f == "session expired or invalid user. Please login again.")
     {
         sessionStorage.clear();
-        window.location = "https://apccproject.herokuapp.com/userlock";
+        window.location = "http://www.apccproject.ml/userlock";
     }
 }
 

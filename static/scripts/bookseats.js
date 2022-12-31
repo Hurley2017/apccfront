@@ -31,7 +31,7 @@ function gettime()
     const doc = {"istation": istation, "dstation": dstation};
     const jdoc = JSON.stringify(doc);
     $.ajax({
-        url:"https://irctcbackend.herokuapp.com/seat/gettime",
+        url:"http://www.apccproject.ml/seat/gettime",
         type:"POST",
         contentType:"application/json",
         data:jdoc,
@@ -55,6 +55,6 @@ function choose(i)
     if(i == "session expired or user invalid! Please login again.")
     {
         sessionStorage.clear();
-        window.location = "https://apccproject.herokuapp.com/userlock";
+        window.location = "http://www.apccproject.ml/userlock";
     }
 }

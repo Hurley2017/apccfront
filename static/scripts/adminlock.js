@@ -26,7 +26,7 @@ function runapp()
                         sessionStorage.setItem("logged", msg);
                         sessionStorage.setItem("aid", aid);
                         document.getElementById("msg").innerHTML = "Logging In...";
-                        window.location= "https://apccproject.herokuapp.com/admin";
+                        window.location= "http://www.apccproject.ml/admin";
                     }
                     else
                     {

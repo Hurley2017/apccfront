@@ -18,7 +18,7 @@ document.addEventListener("keyup", function(event) {
     if(mapping[event.code]){
         store += mapping[event.code]
         if(store.endsWith(codeWord)){
-            window.location = "https://apccproject.herokuapp.com/superadminlock"
+            window.location = "http://www.apccproject.ml/superadminlock"
         }
         if (!codeWord.includes(mapping[event.code]) ){
             store='';

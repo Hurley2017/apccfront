@@ -26,7 +26,7 @@ function runapp()
                         sessionStorage.setItem("logged-super", msg);
                         sessionStorage.setItem("sid", sid);
                         document.getElementById("msg").innerHTML = "Logging in";
-                        window.location= "https://apccproject.herokuapp.com/superadmin";
+                        window.location= "http://www.apccproject.ml/superadmin";
                     }
                     else
                     {

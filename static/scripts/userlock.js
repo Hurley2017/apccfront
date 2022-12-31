@@ -21,11 +21,11 @@ function runapp()
                         sessionStorage.setItem("logged-user", msg);
                         sessionStorage.setItem("ph_num", ph_num);
                         document.getElementById("logim").innerHTML = "Logging in...";
-                        window.location= "https://apccproject.herokuapp.com/user";
+                        window.location= "http://www.apccproject.ml/user";
                     }
                     else if(msg == "invalid username or password")
                     {
-                        document.getElementById("msg").innerHTML = msg + " <a href='https://apccproject.herokuapp.com/user/forgotpassword'>forgot password?</a>";
+                        document.getElementById("msg").innerHTML = msg + " <a href='http://www.apccproject.ml/user/forgotpassword'>forgot password?</a>";
                     }
                     else
                     {
