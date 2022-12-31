@@ -31,7 +31,7 @@ function gettime()
     const doc = {"istation": istation, "dstation": dstation};
     const jdoc = JSON.stringify(doc);
     $.ajax({
-        url:"https://www.apccproject.ml/seat/gettime",
+        url:"https://www.apccbackend.gq/seat/gettime",
         type:"POST",
         contentType:"application/json",
         data:jdoc,
