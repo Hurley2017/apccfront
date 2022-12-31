@@ -1,0 +1,31 @@
+<!--Page For User Ticket History-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Booked Tickets</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="{{url_for('static', filename='./scripts/returnpassuser.js')}}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                    Main Page
+                </button>
+                <button class='btn btn-success mb-1' onClick='rdruser()'>
+                    User Page
+                </button>
+            </div>
+        </nav>
+        <center>
+        <hr>
+        <br>
+        <div id="msg"></div>
+        <script src="{{url_for('static', filename='./scripts/ticket.js')}}">
+        </script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+        </center>
+    </body>
+</html>

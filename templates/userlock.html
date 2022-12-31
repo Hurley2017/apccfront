@@ -1,0 +1,69 @@
+<!--Page For Logging In To The User-->
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{url_for('static', filename='./css/indexadminlock.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='./scripts/returnlockuser.js')}}"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                Main Menu
+            </button>
+            <button class='btn btn-success mb-1' onClick='rdruser()'>
+                User Page
+            </button>
+        </div>
+    </nav>
+    <hr>
+    <br>
+    <div class="center">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header imgcenter">
+                        <h4 class="bodytext display-3">
+                        <b>User Login</b>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-content-sm-center">
+                            <img class="imgresize margin" src="{{url_for('static', filename='./assets/user.png')}}" alt="user img">
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="phonenumber" class="col-md-4 col-form-label text-md-right display-1"><b>Phone Number</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="ph_num" class="widthinput form-control" name="phonenumber" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right display-1"><b>Password</b></label>
+                                <div class="col-md-6">
+                                    <input type="password" id="upass" class="widthinput form-control" name="password" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="margin btn btn-primary btn-lg request mb-2">Log in</button>
+                            </div>
+                            <h6 id="msg" style="text-align: center;" class="display-6"><a href="{{url_for('forgotpass')}}">Forgot Password?</a></h6>
+                    </div>
+                    <div class="card-footer imgcenter">
+                        <h5 id="logim" class="bodytext display-4">Don't have an account? <a href="{{url_for('register')}}">Register</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='./scripts/userlock.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+</body>
+</html>

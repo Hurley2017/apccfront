@@ -1,0 +1,34 @@
+<!--Page For Displaying All Admin Status-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Admins</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='./scripts/returnpasssuper.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/autologout.js')}}"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrland()'>
+                    landing page
+                </button>
+                <button class='btn btn-success mb-1' onClick='rdrsuperadmin()'>
+                    Super Admin Page
+                </button>
+            </div>
+        </nav>
+        <center>
+        <hr>
+        <br>
+        <br>
+        <div style="margin: auto;" class="col-md-10" id="msg"></div>
+        <script src="{{url_for('static', filename='./scripts/alladmin.js')}}">
+        </script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}">
+        </script>
+        </center>
+    </body>
+</html>

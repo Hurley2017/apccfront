@@ -1,0 +1,57 @@
+<!--Page For Viewing Coach And Seats-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Coach View</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                    Main Page
+                </button>
+                    <div>
+                        <select id="istation" class="form-control form-select form-select-sm mb-1" required>
+                            <option selected disabled hidden>From Station</option>
+                            <option>BONGAON</option>
+                            <option>DUM DUM</option>
+                            <option>SEALDAH</option>
+                            </select>
+                    </div>
+                    <div>
+                        <select id="dstation" class="form-control form-select form-select-sm mb-1" required>
+                            <option selected disabled hidden>To Station</option>
+                            <option>BONGAON</option>
+                            <option>DUM DUM</option>
+                            <option>SEALDAH</option>
+                            </select>
+                    </div>
+                    <div>
+                        <select id="type" class="form-control form-select form-select-sm mb-1" required>
+                            <option selected disabled hidden>Coach type</option>
+                            <option>AC</option>
+                            <option>NAC</option>
+                            <option>SL</option>
+                            </select>
+                    </div>
+                    <button class='btn btn-outline-success mb-1 request'>
+                        Search
+                    </button>
+                <button class='btn btn-success mb-1' onClick='rdruser()'>
+                    User Page
+                </button>
+            </div>
+        </nav>
+        <hr>
+        <br>
+        <div id="msg"></div>
+        <script src="{{url_for('static', filename='./scripts/cview.js')}}">
+        </script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+        </center>
+    </body>
+</html>

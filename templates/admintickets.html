@@ -1,0 +1,35 @@
+<!--Page For Displaying All Tickets Booked-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>All Tickets</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='./scripts/returnpass.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/autologout-admin.js')}}"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                    Main Menu
+                </button>
+                <button class='btn btn-success mb-1' onClick='rdradmin()'>
+                    Admin Page
+                </button>
+                
+            </div>
+        </nav>
+        <center>
+        <hr>
+        <br>
+        <div id="msg"></div>
+        <script src="{{url_for('static', filename='./scripts/admintickets.js')}}">
+        </script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}">
+        </script>
+        </center>
+    </body>
+</html>

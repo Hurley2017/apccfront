@@ -1,0 +1,78 @@
+<!--Page For Editing Admin Information-->
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Admin Details Update</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{url_for('static', filename='./css/indexadminlock.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename='./scripts/autologout.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/returnpasssuper.js')}}"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class='btn btn-primary mb-1' onClick='rdrhome()'>
+                Main Page
+            </button>
+            <div>
+                <input class="form-control" id="aid" placeholder="Enter Username" required autofocus>
+            </div>
+            <button class='btn btn-success mb-1' onClick='rdrsuperadmin()'>
+                Super Admin Page
+            </button>
+        </div>
+    </nav>
+    <hr>
+    <br>
+    <div class="center">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header imgcenter">
+                        <h4 class="bodytext display-3">
+                        <b>Enter new details</b>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-content-sm-center">
+                            <img class="imgresize margin" src="{{url_for('static', filename='./assets/admin.png')}}" alt="admin img">
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="aname" class="col-md-4 col-form-label text-md-right display-1"><b>Admin Name</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="aname" class="widthinput form-control" placeholder="New Admin name" name="aname" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="aid" class="col-md-4 col-form-label text-md-right display-1"><b>Username</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="newid" class="widthinput form-control" placeholder="New Admin Username" name="aid" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="apass" class="col-md-4 col-form-label text-md-right display-1"><b>Password</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="apass" class="widthinput form-control" placeholder="New Admin Password" name="apass" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="margin btn btn-primary btn-lg request">Change</button>
+                            </div>
+                        </div>
+                        <div class="card-footer imgcenter">
+                            <h5 id="msg" class="bodytext display-4">If you don't want to change a field leave this field empty</h5>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='./scripts/adminedit.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+</body>
+</html>

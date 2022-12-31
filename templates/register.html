@@ -1,0 +1,79 @@
+<!--Register Page For User-->
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+    <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{url_for('static', filename='./css/indexadminlock.css')}}" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                Main Menu
+            </button>
+            <button class='btn btn-success mb-1' onClick='rdruser()'>
+                User Page
+            </button>
+        </div>
+    </nav>
+    <hr>
+    <br>
+    <div class="center">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header imgcenter">
+                        <h4 class="bodytext display-3">
+                        <b>Register</b>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-content-sm-center">
+                            <img class="imgresize margin" src="{{url_for('static', filename='./assets/register.png')}}" alt="register img">
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="fullname" class="col-md-4 col-form-label text-md-right display-1"><b>Full Name</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="uname" class="widthinput form-control" name="fullname" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right display-1"><b>Email Address</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="umail" class="widthinput form-control" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="phonenumber" class="col-md-4 col-form-label text-md-right display-1"><b>Phone Number</b></label>
+                                <div class="col-md-6">
+                                    <input type="number" id="ph_num" class="widthinput form-control" name="phonenumber" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right display-1"><b>Password</b></label>
+                                <div class="col-md-6">
+                                    <input type="password" id="upass" class="widthinput form-control" name="password" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="margin btn btn-primary btn-lg request">Register</button>
+                            </div>
+                    </div>
+                    <div class="card-footer imgcenter">
+                        <h5 id="msg" class="bodytext display-4">Already have an account? <a href="{{url_for('userlock')}}">Log in</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='./scripts/register.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+</body>
+</html>

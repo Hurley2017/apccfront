@@ -1,0 +1,62 @@
+<!--Page For Removing a Coach-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Remove Coach</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='./scripts/returnpass.js')}}"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="{{url_for('static', filename='./css/indexadminlock.css')}}" rel="stylesheet">
+        <script src="{{url_for('static', filename='./scripts/autologout-admin.js')}}"></script>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-primary mb-1' onClick='rdrhome()'>
+                    Main Page
+                </button>
+                <button class='btn btn-success mb-1' onClick='rdradmin()'>
+                    Admin Page
+                </button>
+            </div>
+        </nav>
+        <hr>
+        <br>
+        <div class="center">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header imgcenter">
+                            <h4 class="bodytext display-3">
+                            <b>Remove a Coach</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-content-sm-center">
+                                <img class="imgresize margin" src="{{url_for('static', filename='./assets/coach.png')}}" alt="coach img">
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div style="margin:auto" class="col-md-8">
+                                        <input type="number" id="coachno" class="widthinput form-control" placeholder="Enter Coach Number" name="tname" required autofocus>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="margin btn btn-primary btn-lg request">Remove</button>
+                                </div>
+                        </div>
+                        <div class="card-footer imgcenter">
+                            <h5 id="msg" class="bodytext display-4"><b>CAUTION!</b> Removing a coach will cause cancellation of all associated Tickets</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="{{url_for('static', filename='./scripts/cdelete.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+    </body>
+</html>

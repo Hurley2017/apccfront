@@ -1,0 +1,52 @@
+<!--Super Admin Page-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Super Admin Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='./css/rest.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script src="{{url_for('static', filename='./scripts/autologout.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/returnpasssuper.js')}}"></script>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                    Main Menu
+                </button>
+                <a class="navbar-brand" href="https://apccproject.herokuapp.com/user">
+                    <blockquote id="msg" class="blockquote text-right display-6">
+                    </blockquote>
+                </a>
+                <button class='btn btn-outline-danger mb-1' onClick='logout()'>
+                   Log out
+                </button>
+            </div>
+        </nav>
+        <hr>
+        <br>
+        <br>
+        <div class="card-group divmargin">
+            <div class="admindivsize text-center">
+                <div>
+                    <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/superadmin.png')}}" alt="sadmin img">
+                    <h5 class="card-title">Manage Admin Accounts</h5>
+                    <p class="card-text">Choose from options below.</p>
+                    <div class="card-group" style="text-align: center;">
+                    <button  onclick="rdraddadmin()" style="margin:auto" class="btn btn-success"><span class="bi bi-plus-circle"></span></button>
+                    <button  onclick="rdrchangeadmin()" style="margin:auto" class="btn btn-warning"><span class="bi bi-pencil-square"></span></button>
+                    <button  onclick="rdrremoveadmin()" style="margin:auto" class="btn btn-danger"><span class="bi bi-dash-circle"></span></button>
+                    <button  onclick="rdrshowadmin()" style="margin:auto" class="btn btn-danger"><span class="bi bi-braces-asterisk"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="{{url_for('static', filename='./scripts/superadmin.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+    </center>
+    </body>
+</html>

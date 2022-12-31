@@ -1,0 +1,80 @@
+<!--Page For Adding a New Train To DataBase-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>Add Admin Account</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='./scripts/returnpasssuper.js')}}"></script>
+        <script src="{{url_for('static', filename='./scripts/autologout.js')}}"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{url_for('static', filename='./css/indexadminlock.css')}}" rel="stylesheet">
+    </head>
+    <body>
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class='btn btn-primary mb-1' onClick='rdrhome()'>
+                Main Page
+            </button>
+            <button class='btn btn-success mb-1' onClick='rdrsuperadmin()'>
+                Super Admin Page
+            </button>
+        </div>
+    </nav>
+    <hr>
+    <br>
+    <div class="center">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header imgcenter">
+                        <h4 class="bodytext display-3">
+                        <b>Add New Admin</b>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-content-sm-center">
+                            <img class="imgresize margin" src="{{url_for('static', filename='./assets/admin.png')}}" alt="admin img">
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="aname" class="col-md-4 col-form-label text-md-right display-1"><b>Full Name</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="aname" class="widthinput form-control" placeholder="Enter Admin Name" name="aname" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="uname" class="col-md-4 col-form-label text-md-right display-1"><b>Username</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="aid" class="widthinput form-control" placeholder="Enter Username" name="uname" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="amail" class="col-md-4 col-form-label text-md-right display-1"><b>Email</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="amail" class="widthinput form-control" placeholder="Enter Email" name="amail" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="pass" class="col-md-4 col-form-label text-md-right display-1"><b>Password</b></label>
+                                <div class="col-md-6">
+                                    <input type="text" id="apass" class="widthinput form-control" placeholder="Enter Password" name="pass" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="margin btn btn-primary btn-lg request">Insert</button>
+                            </div>
+                    </div>
+                    <div class="card-footer imgcenter">
+                        <h5 id="msg" class="bodytext display-4">...</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='./scripts/ainsert.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+    </body>
+</html>

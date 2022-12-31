@@ -1,0 +1,94 @@
+<!--User Main Page-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{url_for('static', filename='./assets/APC.png')}}" />
+        <title>User Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{url_for('static', filename='./css/rest.css')}}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class='btn btn-warning mb-1' onClick='rdrhome()'>
+                    Main Menu
+                </button>
+                <a class="navbar-brand" href="https://apccproject.herokuapp.com/user">
+                    <blockquote id="msg" class="blockquote text-right">
+                    </blockquote>
+                </a>
+                <a id="loginout" ></a>
+            </div>
+        </nav>
+        <br>
+        <br>
+    <br>
+    <br>
+    <br>
+    <div class="card-group divmargin">
+        <div onclick="rdrtview()" class="divsize text-center hola">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/rail.jpg')}}" alt="rail img">
+                <h5 class="card-title">View Trains</h5>
+                <p class="card-text">Search for available Trains for the day</p>
+            </div>
+        </div>
+        <div onclick="rdrcview()" class="divsize text-center hola">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/coach.png')}}" alt="rail img">
+                <h5>View coaches</h5>
+                <p class="card-text">Search for available Coaches and Seats</p>  
+            </div>
+        </div>
+        <div onclick="rdrtimetable()" class="divsize text-center hola">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/timetable.png')}}" alt="rail img">
+                <h5>TimeTable</h5>
+                <p class="card-text">A uniformed timetable for all Trains</p>
+            </div>
+        </div>
+        <div onclick="rdrbook()" class="divsize text-center hola dis">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/ticket.png')}}" alt="rail img">
+                <h5>Book Seats</h5>
+                <p class="card-text">Book seats and collect Ticket number</p> 
+            </div>
+        </div>
+        <div onclick="rdrvalidate()" class="divsize text-center hola dis">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/validate.png')}}" alt="rail img">
+                <h5>View Tickets</h5>
+                <p class="card-text">Validate reservation by Ticket number</p>    
+            </div>
+        </div>
+        <div onclick="rdrcancel()" class="divsize text-center hola dis">
+            <div>
+                <img class="card-img-top imgsize" src="{{url_for('static', filename='./assets/cancel.jpg')}}" alt="rail img">
+                <h5>Cancel Tickets</h5>
+                <p class="card-text">Cancel any reservation by Ticket number</p>   
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <br>
+    <script>
+        var islog = sessionStorage.getItem("logged-user");
+        if(islog)
+        {
+            document.getElementById("loginout").innerHTML="<button class='btn btn-outline-danger mb-1' onClick='logout()'>Log out</button>";
+        }
+        else
+        {
+            document.getElementById("loginout").innerHTML="<button class='btn btn-outline-success mb-1' onClick='login()'>Log in</button>";
+            let allElements = document.querySelectorAll(".dis")
+            for(let i=0; i<allElements.length;++i){
+                allElements[i].setAttribute('hidden', true);
+            }
+        }
+    </script>
+    <script src="{{url_for('static', filename='./scripts/navigation.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/user.js')}}"></script>
+    </body>
+</html>

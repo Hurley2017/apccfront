@@ -1,0 +1,44 @@
+.margin
+{
+    margin: auto;
+}
+.imgresize{
+    margin:auto;
+    width: 100px;
+    height: 100px;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    }
+.headtext{
+    font-size: 3rem;
+}
+.bodytext{
+    font-size: 1.5rem;
+}
+.color-magish
+{
+    color:rgb(233, 82, 13);
+}
+.color-grey
+{
+    color:rgb(78, 69, 156);
+}
+.color-blue
+{
+    color:rgb(25, 0, 252);
+}
+.color-black
+{
+    color:rgb(0, 0, 0);
+}
+.carddim
+{
+    width: 20rem;
+    height: 20rem;
+}
+.imgcenter{
+    text-align: center;
+}
